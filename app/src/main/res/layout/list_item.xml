@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:id="@+id/list_item"
     android:padding="@dimen/fab_margin"
+
     >
 
     <LinearLayout

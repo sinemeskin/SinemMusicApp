@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,10 +21,10 @@ public class PlaylistActivity extends AppCompatActivity {
         setContentView(R.layout.music_list);
 
         Bundle bundle = getIntent().getExtras();
-        int message = bundle.getInt("message");
+        final int message = bundle.getInt("message");
 
 
-        ArrayList<Music> music = new ArrayList<Music>();
+        final ArrayList<Music> music = new ArrayList<Music>();
 
                 if(message==1){
                     setTitle(R.string.category_jazz);
@@ -81,9 +84,30 @@ public class PlaylistActivity extends AppCompatActivity {
                     music.add(new Music("Love Story","Taylor Swift", R.drawable.taylor_swift));
                 }
 
-        MusicAdapter adapter = new MusicAdapter(this, music);
-        ListView listView = (ListView) findViewById(R.id.list);
+        final MusicAdapter adapter = new MusicAdapter(this, music);
+        final ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+
+        final ListView myList = (ListView) findViewById(R.id.list);
+
+
+        myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Object listItem = myList.getItemAtPosition(position);
+                Log.v("message", String.valueOf(position));
+                Log.v("message", String.valueOf(music.get(position).getSongName()));
+                Log.v("message", String.valueOf(music.get(position).getArtistName()));
+
+
+                Intent intent = new Intent(PlaylistActivity.this, NowPlaying.class);
+                intent.putExtra("songName",String.valueOf(music.get(position).getSongName()));
+                Log.v("message", "super");
+               startActivity(intent);
+
+            }
+        });
 
 
     }

@@ -5,5 +5,5 @@
     <string name="category_rock">Rock</string>
     <string name="category_pop">Pop</string>
     <string name="title_activity_jazz">JazzActivity</string>
-    <string name="title_activity_now_playing">NowPlayingActivity</string>
+
 </resources>
