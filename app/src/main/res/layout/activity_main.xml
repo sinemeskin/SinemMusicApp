@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
     android:orientation="vertical"
     tools:context="com.example.android.sinemmusicapp.MainActivity">
 
-    <TextView
+    <Button
         android:id="@+id/jazz"
         style="@style/CategoryStyle"
-        android:background="@color/category_jazz"
-        android:text="@string/category_jazz"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/jazz_background"
+        android:text="@string/category_jazz" />
 
-    <TextView
+    <Button
         android:id="@+id/classical"
         style="@style/CategoryStyle"
-        android:background="@color/category_classical"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/classical_background"
         android:text="@string/category_classical" />
 
-    <TextView
+    <Button
         android:id="@+id/rock"
         style="@style/CategoryStyle"
-        android:background="@color/category_rock"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rock_background"
         android:text="@string/category_rock" />
 
-    <TextView
+    <Button
         android:id="@+id/pop"
         style="@style/CategoryStyle"
-        android:background="@color/category_pop"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/pop_background"
         android:text="@string/category_pop" />
 
 </LinearLayout>

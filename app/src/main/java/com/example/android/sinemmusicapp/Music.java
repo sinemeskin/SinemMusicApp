@@ -15,15 +15,15 @@ public class Music {
     }
 
 
-    public String getSongName(){
+    public String getSongName() {
         return mSongName;
     }
 
-    public String getArtistName(){
+    public String getArtistName() {
         return mArtistName;
     }
 
-    public int getImageResourceID(){
+    public int getImageResourceID() {
         return mImageResourceID;
     }
 

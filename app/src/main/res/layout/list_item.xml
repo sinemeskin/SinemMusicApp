@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_transparent"
     android:orientation="vertical"
-    android:id="@+id/list_item"
-    android:padding="@dimen/fab_margin"
-
-    >
+    android:padding="@dimen/fab_margin">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,27 +17,27 @@
             android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="@dimen/activity_horizontal_margin">
 
             <TextView
                 android:id="@+id/song_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="song"
-                />
+                style="@style/listItemText"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:text="@string/song" />
 
             <TextView
                 android:id="@+id/artist_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="artist"
-                />
+                style="@style/listItemText"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:text="@string/artist" />
 
         </LinearLayout>
 
